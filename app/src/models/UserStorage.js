@@ -1,14 +1,22 @@
 "use strict";
 
-class UserStorage {
-    static #users = {   //스태틱 정적변수 = 외부에서 불러와짐 하지만 #으로 외부에서 받되 공개되지는 않도록 은닉화하였음
-        id: ["sunwoong", "나개발", "나팀장", "dbw07105"],
-        psword: ["1234", "12345", "123456", "0000"],
-        name: ["김선웅", "나개발", "나팀장", "강승하"],
-    };
+const fs = require("fs").promises;
 
+class UserStorage {
+    static #getUserInfo(data, id) {
+        const users = JSON.parse(data);
+        const idx = users.id.indexOf(id);
+        const usersKeys = Object.keys(users);
+        const userInfo = usersKeys.reduce((newUsers, info) => {
+            newUsers[info] = users[info][idx];
+            return newUsers;
+        }, {});
+        
+        return userInfo;
+    }
+    
     static getUsers(...fields) {
-        const users = this.#users;
+        // const users = this.#users;
         const newUsers = fields.reduce((newUsers, field) => {
             if(users.hasOwnProperty(field)){
                 newUsers[field] = users[field];
@@ -19,18 +27,13 @@ class UserStorage {
     }
 
     static getUserInfo(id) {
-        const users = this.#users;
-        const idx = users.id.indexOf(id);
-        const usersKeys = Object.keys(users);
-        const userInfo = usersKeys.reduce((newUsers, info) => {
-            newUsers[info] = users[info][idx];
-            return newUsers;
-        }, {});
-
-        return userInfo;
+       return fs
+       .readFile("./src/databases/users.json")
+       .then((data) => {
+        return this.#getUserInfo(data, id);
+       })
+       .catch(console.error);  
     }
-
-    
 }
 
 module.exports = UserStorage;
