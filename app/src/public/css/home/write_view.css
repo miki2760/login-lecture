@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: px solid silver;
+  font-family: 'Noto Sans KR', sans-serif;
+  outline: none;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-size: 13px;
+  color: #777;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+  /*글자는 디폴트를 rem으로 하면 너무 크다*/
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.3rem;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+  color: #222;
+}
+
+h3 {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #222;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #666;
+}
+
+h5 {
+  font-size: 0.8rem;
+  line-height: 2rem;
+  color: #555;
+}
+
+p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #348fe4;
+  background: #348fe4;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #348fe4;
+}
+
+/*
+start
+*/
+.write {
+  min-width: 360px;
+  margin: 5rem auto;
+  border: 1px solid #ddd;
+  padding: 15px 2%;
+}
+
+.write> :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #999;
+  padding-bottom: 15px;
+}
+
+.write> :nth-child(1) img {
+  width: 25px;
+  height: 25px;
+}
+
+.write> :nth-child(1) h4 {
+  color: #333;
+}
+
+.write nav {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #999;
+}
+
+.write nav a, .write nav select {
+  margin: 0 0.3rem;
+}
+
+.write form {
+  padding: 15px 0;
+}
+
+.write form select {
+  margin-left: 1%;
+  width: 100px;
+}
+
+.write form> :nth-child(3) {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-bottom: 1px solid #999;
+  padding: 5px 1%;
+  margin: 15px 0 5px;
+}
+
+.write form textarea {
+  width: 100%;
+  height: 320px;
+  padding: 5px 1%;
+  border: 0;
+  border-bottom: 1px solid #999;
+}
+
+.write form> :nth-child(5) {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px 1%;
+  border: 0;
+  border-bottom: 1px solid #999;
+}
+
+.write> :nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.write> :nth-child(4)> :nth-child(1) {
+  margin-top: 0.6rem;
+  display: flex;
+}
+
+.write> :nth-child(4)> :nth-child(1) p {
+  font-size: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.write> :nth-child(4)> :nth-child(2)> :nth-child(1) {
+  margin-right: 5px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: 1px solid #348fe4;
+  background: #348fe4;
+  color: #eee;
+}
+
+.write> :nth-child(4)> :nth-child(2)> :nth-child(2) {
+  padding: 5px 20px;
+  border-radius: 15px;
+  border: 1px solid #348fe4;
+  background: #348fe4;
+  color: #eee;
+}
+
+/*
+view
+*/
+.view {
+  min-width: 360px;
+  margin: 5rem auto;
+  border: 1px solid #ddd;
+  padding: 15px 2%;
+}
+
+.view header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #999;
+}
+
+.view header img {
+  width: 25px;
+  height: 25px;
+}
+
+.view header>img {
+  background: orange;
+  border: 0;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.view header div> :nth-child(1) {
+  margin-right: 0.8rem;
+}
+
+.view> :nth-child(2) {
+  text-align: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid #999;
+}
+
+.view> :nth-child(2)>h4 {
+  color: #348fe4;
+}
+
+.view> :nth-child(2)>p {
+  color: #999;
+}
+
+.view> :nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #ddd;
+  padding-top: 0.5rem;
+}
+
+.view> :nth-child(3) p {
+  color: #999;
+}
+
+.view> :nth-child(3) div p {
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+.view> :nth-child(3) div>p img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+}
+
+.view> :nth-child(4) {
+  padding: 1rem 0;
+}
+
+.view> :nth-child(5) img {
+  width: 100%;
+}
+
+.view> :nth-child(5) p {
+  margin: 1rem 0;
+  line-height: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.view>form {
+  margin: 4rem 0 2.5rem;
+  border-bottom: 1px solid black;
+  padding: 1rem 0;
+}
+
+.view>form input {
+  color: #348fe4;
+  background: none;
+  border: 1px solid #348fe4;
+  border-radius: 20px;
+  padding: 5px 1%;
+  margin: 0.2rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.view>form div {
+  height: 2rem;
+  margin-top: 2rem;
+}
+
+.view>form div> :nth-child(1), .view>form div> :nth-child(2) {
+  float: left;
+  padding: 5px 2%;
+  background: none;
+  color: #999;
+  border: 1px solid #999;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+}
+
+.view form div button img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.view form div> :nth-child(3) {
+  float: right;
+  padding: 5px 3%;
+  border-radius: 15px;
+}
+
+.view> :nth-child(7) {
+  clear: both;
+}
+
+.view> :nth-child(7)>p>span {
+  color: orange;
+}
+
+.view> :nth-child(7)>div {
+  position: relative;
+  margin: 1rem 0;
+  padding: 1.5rem 1rem;
+  border: 1px solid #ddd;
+}
+
+.view> :nth-child(7)>div img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.view> :nth-child(7)>div div {
+  display: inline-block;
+  margin-left: 2%;
+}
+
+.view> :nth-child(7)>div div small {
+  display: block;
+  margin: 0.2rem 0;
+}
+
+.view> :nth-child(7)>div div small::after {
+  content: "신고";
+  clear: both;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.view> :nth-child(7)>div div p {
+  line-height: 1.3rem;
+}
+
+.view> :nth-child(7)>div a {
+  position: absolute;
+  top: 1.5rem;
+  right: 3%;
+}
+
+.view> :nth-child(7)>form {
+  margin: 1.5rem 0;
+}
+
+.view> :nth-child(7)>form textarea {
+  width: 98%;
+  height: 100px;
+  margin: 1rem 1%;
+  border-radius: 5px;
+  padding: 5px 1%;
+}
+
+.view> :nth-child(7)>form>div {
+  padding: 0 1%;
+}
+
+.view> :nth-child(7)>form>div>input {
+  margin-top: 0.4rem;
+}
+
+.view> :nth-child(7)>form>div>button {
+  float: right;
+  padding: 5px 3%;
+}
+
+.view> :nth-child(8) {
+  margin: 2rem 0 4rem;
+  border-bottom: 1px solid #666;
+}
+
+.view> :nth-child(9) {
+  clear: both;
+  margin: 5rem 0 3rem;
+}
+
+.view> :nth-child(9)> :nth-child(1) {
+  position: relative;
+  background: black;
+}
+
+.view> :nth-child(9)> :nth-child(1)>h4 {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 2%;
+}
+
+.view> :nth-child(9)>section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.view> :nth-child(9)>section>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view> :nth-child(9)>section div h4 {
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.view> :nth-child(9)>section div p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.view> :nth-child(9)>section>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view> :nth-child(9)>section>div>img {
+  width: 80px;
+  height: 80px;
+}
+
+.view> :nth-child(9)>section>div> :nth-child(1) {
+  width: 80%;
+}
+
+.view> :nth-child(9)>section span {
+  color: orange;
+  margin-right: 0.3rem;
+}
+
+.view> :nth-child(9)>section>div>div {
+  margin-top: 0.2rem;
+}
+
+.view> :nth-child(9)>section>div>div small {
+  display: inline;
+  margin-left: 0.3rem;
+}
+
+.view> :nth-child(9)>section>div>div img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.view> :nth-child(9)>p {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.view> :nth-child(10) {
+  height: 70px;
+  background: black;
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.view> :nth-child(10) span {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  color: #eee;
+}
+
+.view> :nth-child(10) div {
+  color: #999;
+  margin-left: 1rem;
+}
+
+.view> :nth-child(10) div h5 {
+  color: white;
+  line-height: 1rem;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.view> :nth-child(11) {
+  margin: 5rem 0 2rem;
+}
+
+.view> :nth-child(11)> :nth-child(1) {
+  position: relative;
+  background: black;
+}
+
+.view> :nth-child(11)> :nth-child(1)>h4 {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 2%;
+}
+
+.view> :nth-child(11)> :nth-child(2) {
+  margin-top: 3rem;
+}
+
+.view> :nth-child(11)> :nth-child(2), .view> :nth-child(11)> :nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view> :nth-child(11) div section {
+  width: 49%;
+  height: 200px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.view> :nth-child(11) div section img {
+  width: 100%;
+  height: 200px;
+}
+
+.view> :nth-child(11) div section>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.view> :nth-child(11) div section>div h4 {
+  margin-top: 9rem;
+}
+
+.view> :nth-child(11) div section>div h4, .view> :nth-child(11) div section>div p {
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+.view>p {
+  text-align: right;
+}
+
+/*
+list
+*/
+.list {
+  min-width: 360px;
+  margin: 5rem auto;
+  border: 1px solid #eee;
+  padding: 15px 1%;
+}
+
+.list header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #999;
+}
+
+.list header img {
+  width: 25px;
+  height: 25px;
+}
+
+.list header> :nth-child(1) {
+  background: orange;
+  border: 0;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.list header> :nth-child(2) {
+  margin: 0;
+  transform: translate(15%, 0);
+}
+
+.list header div> :nth-child(1) {
+  margin-right: 0.8rem;
+}
+
+.list nav {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #999;
+}
+
+.list nav div {
+  margin: 1rem 1rem 1rem 0.5rem;
+  position: relative;
+}
+
+.list nav div a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.list nav> :nth-child(1) a {
+  color: black;
+}
+
+.list nav> div a:before{
+  content : '';
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width : 0;
+  bottom: -15px;
+  left : 0%;
+  transition: 0.3s;
+}
+.list nav> div a:hover:before{
+  width : 100%;
+}
+
+.list>section {
+  padding: 1rem 0.5rem;
+  border-bottom: 2px solid #999;
+}
+
+.list>section>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list>section div h4 {
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.list>section div p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.list>section>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list>section>div>img {
+  width: 80px;
+  height: 80px;
+}
+
+.list>section>div> :nth-child(1) {
+  width: 80%;
+}
+
+.list>section>div>div {
+  margin-top: 0.2rem;
+}
+
+.list>section>div>div small {
+  display: inline;
+  margin-left: 0.3rem;
+}
+
+.list>section>div>div img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.list>p {
+  text-align: center;
+  margin-top: 1rem;
+}

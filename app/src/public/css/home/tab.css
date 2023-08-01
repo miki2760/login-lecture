@@ -1,0 +1,35 @@
+.cliffs-tabbed-forms {
+	clear: both;
+	.tabs {
+		border-bottom: 1px solid #348fe4;
+		z-index: 0;
+		&::before {
+		z-index: 1;
+		}
+	}
+	.tabs li {
+		list-style:none;
+		display:inline;
+		margin: 0 1em;
+	}
+
+	.tabs a {
+		padding:5px 10px;
+		display:inline-block;
+		background:#78b1e6;
+		color:#fff;
+		text-decoration:none;
+		position: relative;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+
+	.tabs a.active {
+		background:#348fe4;
+		color:#ffffff;
+		border: 1px solid #348fe4;
+		border-bottom-color: #fff;
+		position: relative;
+		top: 1px;
+	}
+}
